@@ -23,3 +23,13 @@ corro npm run dev para que toda las vistas se recarguen automaticamente
 7. php artisan make:model Post -mcr 
 para crear el modelo Post y el controlador y rutas
 
+8. php artisan serve para poder levantar el servidor
+
+9. php artisan storage:link para el almacenamiento de las img
+
+importante, en: vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php
+
+comente esta linea para que no me aparezca el problema: // Comentamos o eliminamos esta línea:
+file_put_contents('php://stdout', "[$formattedDateTime] $remoteAddress [$requestMethod] URI: $uri\n");
+
+
