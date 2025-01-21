@@ -1,0 +1,25 @@
+1.Crear el  proyecto laravel con composer
+   composer create-project laravel/laravel -----
+
+Además cree la base de datos en phpmyadmin, se llama db_blogg. 
+
+
+2.Instalar Beeze para poder hacer la autenticación
+    composer require laravel/breeze --dev
+
+3. Instalar Beeze:
+    php artisan breeze:install
+    Seleccioné: Blade with Alpine  y  el dark mode, además con Pest 
+
+4. Modifiqué el .env con el nombre de mi db_blogg
+
+5. corrí las migraciones 
+    php artisan migrate
+
+6. Corrí npm install 
+
+corro npm run dev para que toda las vistas se recarguen automaticamente
+
+7. php artisan make:model Post -mcr 
+para crear el modelo Post y el controlador y rutas
+
