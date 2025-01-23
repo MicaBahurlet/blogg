@@ -23,7 +23,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.create');
     }
 
     /**
@@ -46,20 +46,42 @@ class PostController extends Controller
     //     return redirect()->route('posts.index');
     // }
 
+    // public function store(Request $request)
+    // {
+    //     $post = new Post();
+    //     $post->title = $request->title;
+    //     $post->body = $request->body;
+
+    //     if ($request->hasFile('image')) {
+    //         $file = $request->file('image');
+    //         $path = Storage::putFile('public/images', $file);
+    //         $post->image_url = $path;
+    //     }
+
+    //     $post->save();
+    //     return redirect()->route('posts.index');
+    // }
+
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'title' => 'required|max:255',
+            'body' => 'required',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
         $post = new Post();
-        $post->title = $request->title;
-        $post->body = $request->body;
+        $post->title = $validatedData['title'];
+        $post->body = $validatedData['body'];
 
         if ($request->hasFile('image')) {
-            $file = $request->file('image');
-            $path = Storage::putFile('public/images', $file);
-            $post->image_url = $path;
+            $imagePath = $request->file('image')->store('images', 'public');
+            $post->image_url = $imagePath;
         }
 
         $post->save();
-        return redirect()->route('posts.index');
+
+        return redirect()->route('posts.index')->with('success', 'Post creado exitosamente');
     }
 
 
@@ -92,20 +114,20 @@ class PostController extends Controller
      * Remove the specified resource from storage.
      */
     public function destroy($post_id)
-{
-    $post = Post::find($post_id);
+    {
+        $post = Post::find($post_id);
 
-    if ($post) {
-        // primero veo si tiene img
-        if ($post->image_url) {
-            // después borro
-            Storage::delete('public/images/' . $post->image_url);
+        if ($post) {
+            // primero veo si tiene img
+            if ($post->image_url) {
+                // después borro
+                Storage::delete('public/images/' . $post->image_url);
+            }
+
+            $post->delete();
         }
 
-        $post->delete();
+        // Añadir mensaje de éxito a la sesión
+        return redirect()->route('posts.index')->with('success', 'Post eliminado exitosamente');
     }
-
-    // Añadir mensaje de éxito a la sesión
-    return redirect()->route('posts.index')->with('success', 'Post eliminado exitosamente');
-}
 }
