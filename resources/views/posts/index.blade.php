@@ -23,7 +23,7 @@
                 <div class="p-6 text-gray-900 dark:text-gray-200">
                     <!-- Modal toggle -->
                     <a href="{{ route('posts.create') }}"
-                        class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:hover:bg-blue-700 dark:focus:ring-blue-800 "
+                        class="w-full block text-white bg-purple-600 hover:bg-purple-700 focus:ring-4 focus:outline-none focus:ring-purple-300 font-bold rounded-lg text-lg px-6 py-3 text-center dark:bg-purple-700 dark:hover:bg-purple-800 dark:focus:ring-purple-900"
                         type="button">
                         Nuevo Post
                     </a>
@@ -307,7 +307,8 @@
 </script>
 
 {{-- <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script> --}}
-<script src="https://cdn.tiny.cloud/1/c3duvwl26x50nced34cn3uowoxzso8epbekiovs1wd2dpvok/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+<script src="https://cdn.tiny.cloud/1/c3duvwl26x50nced34cn3uowoxzso8epbekiovs1wd2dpvok/tinymce/7/tinymce.min.js"
+    referrerpolicy="origin"></script>
 <script>
     tinymce.init({
         selector: '#body', // Selecciona el textarea por ID
@@ -316,7 +317,7 @@
         toolbar: 'undo redo | styleselect | formatselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | code | emoticons | pagebreak  | table | fullscreen', // perzonalizacion de la barra de herramientas
         menubar: false, // aqui lo que quiera poner como menú, ver la docu
         branding: false // Oculta el branding de TinyMCE
-        
+
 
     });
 </script>

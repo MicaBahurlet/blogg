@@ -3,6 +3,11 @@
 
 Welcome to my project!
 
+<p align="start">
+<img width="500px"  src="https://skillicons.dev/icons?i=php,laravel,tailwind,mysql,nodejs,git,github,perline=10"  />
+</p>
+
+
 ---
 
 ## 📦 **Technologies & Dependencies**
