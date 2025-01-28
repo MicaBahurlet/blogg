@@ -1,21 +1,20 @@
 <x-app-layout>
 
-    {{-- <x-slot name="header">
+    <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Crear un nuevo post') }}
+            {{ __('Todos tus posts') }}
         </h2>
-    </x-slot> --}}
+    </x-slot>
 
-    <div class="py-12">
+    {{-- <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{-- {{ __("You're logged in!") }} --}}
                     <h1 class="text-3xl font-bold">Todos tus posts </h1>
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -23,9 +22,9 @@
                 <div class="p-6 text-gray-900 dark:text-gray-200">
                     <!-- Modal toggle -->
                     <a href="{{ route('posts.create') }}"
-                        class="w-full block text-white bg-purple-600 hover:bg-purple-700 focus:ring-4 focus:outline-none focus:ring-purple-300 font-bold rounded-lg text-lg px-6 py-3 text-center dark:bg-purple-700 dark:hover:bg-purple-800 dark:focus:ring-purple-900"
+                           class="w-full block text-purple-600 border border-purple-600 bg-white hover:bg-purple-100 focus:ring-4 focus:outline-none focus:ring-purple-300 font-bold rounded-lg text-lg px-6 py-3 text-center dark:bg-gray-800 dark:text-purple-500 dark:border-purple-500 dark:hover:bg-gray-700 dark:focus:ring-purple-900"
                         type="button">
-                        Nuevo Post
+                        Nuevo post
                     </a>
 
                     <!-- Main modal -->
@@ -218,7 +217,7 @@
                                 <td class="px-6 py-4">
                                     <button data-modal-target="popup-modal-{{ $post->id }}"
                                         data-modal-toggle="popup-modal-{{ $post->id }}"
-                                        class="text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-red-500 dark:hover:bg-red-600 dark:focus:ring-red-900">
+                                        class="text-red-600 border border-red-600 bg-white hover:bg-red-100 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-gray-800 dark:text-red-500 dark:border-red-500 dark:hover:bg-gray-700 dark:focus:ring-red-900">
                                         Borrar
                                     </button>
 
