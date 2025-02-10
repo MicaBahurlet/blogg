@@ -1,7 +1,9 @@
 
 # 🚀 blogg 
 
-Welcome to my project!
+Welcome to my project! 
+
+blog is a simple web app that seeks to become a space where users can post texts, thoughts, and writings that interest them in a simple and easy way.
 
 <p align="start">
 <img width="500px"  src="https://skillicons.dev/icons?i=php,laravel,tailwind,mysql,nodejs,git,github,perline=10"  />
