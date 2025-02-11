@@ -22,7 +22,7 @@
                 <div class="p-6 text-gray-900 dark:text-gray-200">
                     <!-- Modal toggle -->
                     <a href="{{ route('posts.create') }}"
-                           class="w-full block text-purple-600 border border-purple-600 bg-white hover:bg-purple-100 focus:ring-4 focus:outline-none focus:ring-purple-300 font-bold rounded-lg text-lg px-6 py-3 text-center dark:bg-gray-800 dark:text-purple-500 dark:border-purple-500 dark:hover:bg-gray-700 dark:focus:ring-purple-900"
+                           class="w-full block inline-block bg-gradient-to-r from-[#FF2D20] to-purple-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:shadow-lg transition-shadow duration-300 text-center"
                         type="button">
                         Nuevo post
                     </a>

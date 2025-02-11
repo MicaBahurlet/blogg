@@ -26,6 +26,15 @@ class PostController extends Controller
         return view('posts.create');
     }
 
+    // public function create()
+    // {
+    //     if (!auth()->check()) {
+    //         return redirect()->route('login')->with('message', 'Por favor, inicia sesión para crear un post.');
+    //     }
+
+    //     return view('posts.create');
+    // }
+
 
 
     public function store(Request $request)
@@ -97,7 +106,7 @@ class PostController extends Controller
 
         return redirect()->route('posts.index')->with('success', 'Post actualizado exitosamente');
     }
-    
+
 
     /**
      * Remove the specified resource from storage.
