@@ -26,41 +26,7 @@ class PostController extends Controller
         return view('posts.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    // public function store(Request $request)
-    // {
-    //     $post = new Post();
-    //     $post->title = $request->title;
-    //     $post->body = $request->body;
 
-    //     if ($request->hasFile('image')) {
-    //         $file = $request->file('image');
-    //         $path = Storage::putFile('public/images', $file);
-    //         $nuevo_path = str_replace('public/', '', $path);
-    //         $post->image_url = $nuevo_path;
-    //     }
-
-    //     $post->save();
-    //     return redirect()->route('posts.index');
-    // }
-
-    // public function store(Request $request)
-    // {
-    //     $post = new Post();
-    //     $post->title = $request->title;
-    //     $post->body = $request->body;
-
-    //     if ($request->hasFile('image')) {
-    //         $file = $request->file('image');
-    //         $path = Storage::putFile('public/images', $file);
-    //         $post->image_url = $path;
-    //     }
-
-    //     $post->save();
-    //     return redirect()->route('posts.index');
-    // }
 
     public function store(Request $request)
     {
@@ -100,7 +66,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view('posts.edit', compact('post'));
     }
 
     /**
@@ -108,8 +74,30 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $validatedData = $request->validate([
+            'title' => 'required|max:255',
+            'body' => 'required',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        $post->title = $validatedData['title'];
+        $post->body = $validatedData['body'];
+
+        if ($request->hasFile('image')) {
+            // Delete the old image
+            if ($post->image_url) {
+                Storage::delete('public/' . $post->image_url);
+            }
+            // Store the new image
+            $imagePath = $request->file('image')->store('images', 'public');
+            $post->image_url = $imagePath;
+        }
+
+        $post->save();
+
+        return redirect()->route('posts.index')->with('success', 'Post actualizado exitosamente');
     }
+    
 
     /**
      * Remove the specified resource from storage.
