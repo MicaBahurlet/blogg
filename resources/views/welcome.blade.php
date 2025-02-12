@@ -1274,7 +1274,7 @@
                                     
                                 <div class="mt-12">
                                     @auth
-                                        <a href="{{ route('posts.create') }}" 
+                                        <a href="{{ route('dashboard') }}" 
                                            class="inline-block bg-gradient-to-r from-[#FF2D20] to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transition-shadow duration-300">
                                            🚀 Comenzar a publicar →
                                         </a>
@@ -1290,17 +1290,17 @@
 
                         <!-- Preview de funcionalidades -->
                         <div class="mt-20 grid gap-8 md:grid-cols-2 max-w-6xl mx-auto">
-                            <div class="p-6 bg-white dark:bg-zinc-900 rounded-xl shadow-[0_10px_40px_-15px_rgba(0,0,0,0.2)]">
+                            <div class="p-6 bg-white dark:bg-zinc-900 rounded-xl shadow-[0_10px_40px_-15px_rgba(0,0,0,0.2)] transition-shadow duration-300 hover:shadow-[0_20px_50px_-15px_rgba(0,0,0,0.3)]">
                                 <h3 class="text-xl font-semibold mb-4">📝 Editor simplificado</h3>
                                 <p class="text-gray-500 dark:text-gray-400">
                                     Formato básico con markdown + enfoque en el contenido
                                 </p>
                             </div>
 
-                            <div class="p-6 bg-white dark:bg-zinc-900 rounded-xl shadow-[0_10px_40px_-15px_rgba(0,0,0,0.2)]">
-                                <h3 class="text-xl font-semibold mb-4">🖼️ Multimedia fácil</h3>
+                            <div class="p-6 bg-white dark:bg-zinc-900 rounded-xl shadow-[0_10px_40px_-15px_rgba(0,0,0,0.2)] transition-shadow duration-300 hover:shadow-[0_20px_50px_-15px_rgba(0,0,0,0.3)]">
+                                <h3 class="text-xl font-semibold mb-4">🖼️ Nadie dijo que escribir es aburrido</h3>
                                 <p class="text-gray-500 dark:text-gray-400">
-                                    Arrastra y suelta imágenes directamente en tus posts
+                                    Identificá tus post con imágenes y gráficos
                                 </p>
                             </div>
                         </div>

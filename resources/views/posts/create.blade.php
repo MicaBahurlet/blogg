@@ -19,7 +19,7 @@
                                 <span style="color:red">*</span></label>
                             <textarea name="body" id="body" rows="4"
                                 class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"></textarea>
-                            <label for="image" class="block mb-2 text-m font-medium text-gray-900 dark:text-white">Imágen
+                            <label for="image" class="block mb-2 text-m font-medium text-gray-900 dark:text-white">Imágen de portada
                                 <span style="color:red">*. jpg</span></label>
                             <input
                                 class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:placeholder-gray-400"
@@ -41,6 +41,10 @@
             </div>
         </div>
     </div>
+    <footer class="w-full mt-16 py-4 text-center text-sm bg-gradient-to-r from-[#FF2D20] to-purple-600 text-white px-8 text-lg font-semibold">
+        <h3 class="mb-4">© 2025 blogg</h3>
+        <h3>Developed by: <a href="https://micaela-bahurlet.vercel.app/" target="_blank" class="hover:underline">Micaela Bahurlet</a></h3>
+    </footer>
 </x-app-layout>
 
 <script src="https://cdn.tiny.cloud/1/c3duvwl26x50nced34cn3uowoxzso8epbekiovs1wd2dpvok/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>

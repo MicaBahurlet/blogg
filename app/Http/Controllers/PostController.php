@@ -67,7 +67,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-             return view('posts.show', compact('post'));
+        return view('posts.view', compact('post'));
     }
 
     /**
@@ -127,5 +127,13 @@ class PostController extends Controller
 
         // Añadir mensaje de éxito a la sesión
         return redirect()->route('posts.index')->with('success', 'Post eliminado exitosamente');
+    }
+
+    public function dashboard()
+    {
+        // Aquí luego podría traer solo los posts del usuario auth
+        $posts = Post::latest()->get();
+
+        return view('dashboard', compact('posts'));
     }
 }

@@ -13,9 +13,13 @@ Route::get('/', function () {
 
 //Rutas protegidas
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard'); //acá verifica automaticamente a menos que lo cambie desde Breeze
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard'); 
+
+Route::get('/dashboard', [PostController::class, 'dashboard'])
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard');
 
 
 Route::get('/posts', [PostController::class, 'index'])->name('posts.index');

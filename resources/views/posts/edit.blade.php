@@ -29,12 +29,15 @@
                                 <img src="{{ asset('storage/' . $post->image_url) }}" alt="Imagen de {{ $post->title }}" class="w-32 h-32 mt-2">
                             @endif
                         </div>
-                        <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600 mt-6">
+                        <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600 mt-6 space-x-4">
                             <button type="submit"
-                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            class="inline-block bg-gradient-to-r from-[#FF2D20] to-purple-600 text-white px-8 py-4 rounded-full text-m
+                            font-semibold hover:shadow-lg transition-shadow duration-300">
                                 Actualizar Post</button>
                             <a href="{{ route('posts.index') }}"
-                                class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                            class="text-m font-semibold text-violet-700 dark:text-gray-300 
+                            hover:bg-gray-100 dark:hover:bg-zinc-800 px-7 py-4 rounded-full 
+                            transition-colors duration-300 border-2 border-purple-500">
                                 Cancelar</a>
                         </div>
                     </form>
@@ -42,6 +45,10 @@
             </div>
         </div>
     </div>
+    <footer class="w-full mt-16 py-4 text-center text-sm bg-gradient-to-r from-[#FF2D20] to-purple-600 text-white px-8 text-lg font-semibold">
+        <h3 class="mb-4">© 2025 blogg</h3>
+        <h3>Developed by: <a href="https://micaela-bahurlet.vercel.app/" target="_blank" class="hover:underline">Micaela Bahurlet</a></h3>
+    </footer>
 </x-app-layout>
 
 <script src="https://cdn.tiny.cloud/1/c3duvwl26x50nced34cn3uowoxzso8epbekiovs1wd2dpvok/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
