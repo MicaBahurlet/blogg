@@ -22,9 +22,9 @@
                 <div class="p-6 text-gray-900 dark:text-gray-200">
                     <!-- Modal toggle -->
                     <a href="{{ route('posts.create') }}"
-                           class="w-full block inline-block bg-gradient-to-r from-[#FF2D20] to-purple-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:shadow-lg transition-shadow duration-300 text-center"
+                           class=" block inline-block bg-gradient-to-r from-[#FF2D20] to-purple-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:shadow-lg transition-shadow duration-300 text-center"
                         type="button">
-                        Nuevo post
+                        Nuevo post →
                     </a>
 
                 </div>
@@ -87,12 +87,16 @@
                                 <td class="px-6 py-4">
                                     <button data-modal-target="popup-modal-{{ $post->id }}"
                                         data-modal-toggle="popup-modal-{{ $post->id }}"
-                                        class="text-red-600 border border-red-600 bg-white hover:bg-red-100 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-gray-800 dark:text-red-500 dark:border-red-500 dark:hover:bg-gray-700 dark:focus:ring-red-900">
+                                        class="text-sm font-semibold text-red-700 dark:text-gray-300 
+                                               hover:bg-gray-100 dark:hover:bg-zinc-800 px-5 py-2 rounded-full 
+                                               transition-colors duration-300 border-2 border-red-500">
                                         Borrar
                                     </button>
 
                                     <a href="{{ route('posts.edit', $post->id) }}"
-                                        class="text-blue-600 border border-blue-600 bg-white hover:bg-blue-100 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-gray-800 dark:text-blue-500 dark:border-blue-500 dark:hover:bg-gray-700 dark:focus:ring-blue-900">
+                                        class="text-sm font-semibold text-violet-700 dark:text-gray-300 
+                                               hover:bg-gray-100 dark:hover:bg-zinc-800 px-5 py-2 rounded-full 
+                                               transition-colors duration-300 border-2 border-violet-500">
                                         Editar
                                     </a>
 

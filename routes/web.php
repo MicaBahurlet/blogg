@@ -24,6 +24,8 @@ Route::get('/posts/delete/{id}', [PostController::class, 'destroy'])->name('post
 Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
 Route::get('/posts/{post}/edit', [PostController::class, 'edit'])->name('posts.edit');
 Route::put('/posts/{post}', [PostController::class, 'update'])->name('posts.update');
+// Agrega esta ruta para mostrar un post individual
+Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
 
 // Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
 

@@ -4,33 +4,36 @@
             <div class="overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-200">
 
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">
-                        Estas a punto de crear un nuevo post para tu blog
-                    </h3>
+                    <h2 class="text-4xl font-bold bg-gradient-to-r from-[#FF2D20] to-purple-600 bg-clip-text text-transparent mb-8">
+                        Estas a punto de crear un nuevo post para tu blogg
+                    </h2>
                     <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="space-y-6">
-                            <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Título
+                            <label for="title" class="block mb-2 text-m font-medium text-gray-900 dark:text-white">Título
                                 <span style="color:red">*</span></label>
                             <input type="text" id="title" name="title"
                                 class="bg-gray-50 border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400 focus:ring-4 focus:ring-blue-300 focus:outline-none w-full p-3 text-sm"
                                 placeholder="Título del post" required>
-                            <label for="body" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">¿Sobre qué deseas escribir?
+                            <label for="body" class="block mb-2 text-m font-medium text-gray-900 dark:text-white">¿Sobre qué deseas escribir?
                                 <span style="color:red">*</span></label>
                             <textarea name="body" id="body" rows="4"
                                 class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"></textarea>
-                            <label for="image" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Imágen
+                            <label for="image" class="block mb-2 text-m font-medium text-gray-900 dark:text-white">Imágen
                                 <span style="color:red">*. jpg</span></label>
                             <input
                                 class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:placeholder-gray-400"
                                 id="file_input" type="file" name="image">
                         </div>
-                        <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600 mt-6">
+                        <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600 mt-6 space-x-4">
                             <button type="submit"
-                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                class="inline-block bg-gradient-to-r from-[#FF2D20] to-purple-600 text-white px-8 py-4 rounded-full text-m
+                                 font-semibold hover:shadow-lg transition-shadow duration-300">
                                 Crear Post</button>
                             <a href="{{ route('posts.index') }}"
-                                class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                                class="text-m font-semibold text-violet-700 dark:text-gray-300 
+                                               hover:bg-gray-100 dark:hover:bg-zinc-800 px-7 py-4 rounded-full 
+                                               transition-colors duration-300 border-2 border-purple-500">
                                 Cancelar</a>
                         </div>
                     </form>

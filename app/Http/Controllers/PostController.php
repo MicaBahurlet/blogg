@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 
+
 class PostController extends Controller
 {
     /**
@@ -64,10 +65,9 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show($id)
+    public function show(Post $post)
     {
-        // $post = Post::findOrFail($id);
-        // return view('posts.show', compact('post'));
+             return view('posts.show', compact('post'));
     }
 
     /**

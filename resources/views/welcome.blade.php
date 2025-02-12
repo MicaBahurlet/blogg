@@ -1219,7 +1219,7 @@
                         <nav class="-mx-3 flex justify-start space-x-4">
                             @auth
                                 <a href="{{ url('/dashboard') }}"
-                                    class="text-lg font-semibold text-gray-700 dark:text-gray-300 
+                                    class="text-lg font-semibold text-violet-700 dark:text-gray-300 
                                            hover:bg-gray-100 dark:hover:bg-zinc-800 px-4 py-2 rounded-full 
                                            transition-colors duration-300 border-2 border-purple-500">
                                     Panel principal
