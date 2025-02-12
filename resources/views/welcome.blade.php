@@ -1249,26 +1249,26 @@
                         <div class="text-center">
                             <div class="flex items-center justify-center gap-4 mb-8"> 
                                 <x-application-logo class="h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
-                                <h1 class="text-6xl md:text-7xl font-bold  bg-gradient-to-r from-[#FF2D20] to-purple-600 bg-clip-text text-transparent min-h-[80px] ">
+                                <h1 class="text-6xl md:text-8xl font-bold  bg-gradient-to-r from-[#FF2D20] to-purple-600 bg-clip-text text-transparent min-h-[110px] ">
                                     blogg
                                 </h1>
                             </div>
                             
                             <!-- Subtítulo y descripción -->
                             <div class="max-w-3xl mx-auto">
-                                <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+                                <h2 class="md:text-3xl text-gray-600 dark:text-gray-300 mb-8">
                                     Donde tus ideas cobran vida
-                                </p>
+                                </h2>
 
                                 <div class="space-y-4 text-gray-500 dark:text-gray-400 text-lg">
                                     <p class="leading-relaxed">
-                                        ✍️ Plataforma minimalista para crear y compartir contenido de forma instantánea
+                                         Plataforma minimalista para crear y compartir contenido de forma instantánea
                                     </p>
                                     <p class="leading-relaxed">
-                                        🚀 Publica tus pensamientos, experiencias o historias en minutos
+                                         Publica tus pensamientos, experiencias o historias en minutos
                                     </p>
                                     <p class="leading-relaxed">
-                                        🌈 Interfaz limpia y enfoque en lo esencial: escribir y liberar
+                                         Interfaz limpia y enfoque en lo esencial: escribir y liberar
                                     </p>
                                 </div>
                                     
@@ -1276,12 +1276,12 @@
                                     @auth
                                         <a href="{{ route('posts.create') }}" 
                                            class="inline-block bg-gradient-to-r from-[#FF2D20] to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transition-shadow duration-300">
-                                            Comenzar a publicar →
+                                           🚀 Comenzar a publicar →
                                         </a>
                                     @else
                                         <a href="{{ route('login') }}" 
                                            class="inline-block bg-gradient-to-r from-[#FF2D20] to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transition-shadow duration-300">
-                                            Comenzar a publicar →
+                                           🚀 Comenzar a publicar →
                                         </a>
                                     @endauth
                                 </div>
@@ -1309,7 +1309,8 @@
             </div>
         </div>
         <footer class="w-full mt-16 py-4 text-center text-sm bg-gradient-to-r from-[#FF2D20] to-purple-600 text-white px-8 text-lg font-semibold">
-            <h3>© 2025 blogg</h3>
+            <h3 class="mb-4">© 2025 blogg</h3>
+            <h3>Developed by: <a href="https://micaela-bahurlet.vercel.app/" target="_blank" class="hover:underline">Micaela Bahurlet</a></h3>
         </footer>
     </div>
 </body>
