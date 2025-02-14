@@ -13,10 +13,6 @@ Route::get('/', function () {
 
 //Rutas protegidas
 
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard'); 
-
 Route::get('/dashboard', [PostController::class, 'dashboard'])
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
@@ -28,10 +24,8 @@ Route::get('/posts/delete/{id}', [PostController::class, 'destroy'])->name('post
 Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
 Route::get('/posts/{post}/edit', [PostController::class, 'edit'])->name('posts.edit');
 Route::put('/posts/{post}', [PostController::class, 'update'])->name('posts.update');
-// Agrega esta ruta para mostrar un post individual
 Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
 
-// Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
 
 
 Route::middleware('auth')->group(function () {
