@@ -1,4 +1,16 @@
 <x-guest-layout>
+    <div class="text-center">
+        <h2 class="text-2xl font-bold bg-gradient-to-r from-[#FF2D20] to-purple-600 bg-clip-text text-transparent mb-8">
+            Registrarse
+        </h2>
+    </div>
+    <div class="flex items-center justify-center gap-4 mb-8"> 
+        {{-- <x-application-logo class="h-9 w-auto fill-current text-gray-800 dark:text-gray-200" /> --}}
+        
+        <h1 class="text-6xl md:text-8xl font-bold  bg-gradient-to-r from-[#FF2D20] to-purple-600 bg-clip-text text-transparent min-h-[110px] ">
+            blogg
+        </h1>
+    </div>
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
@@ -49,4 +61,10 @@
             </x-primary-button>
         </div>
     </form>
+    
 </x-guest-layout>
+<footer class="w-full mt-16 py-4 text-center text-sm bg-gradient-to-r from-[#FF2D20] to-purple-600 text-white px-8 text-lg font-semibold">
+    <h3 class="mb-4">© 2025 blogg</h3>
+    <h3>Developed by: <a href="https://micaela-bahurlet.vercel.app/" target="_blank" class="hover:underline">Micaela Bahurlet</a></h3>
+</footer>
+
